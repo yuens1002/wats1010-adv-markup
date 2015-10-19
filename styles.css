@@ -1,1 +1,285 @@
 /* Styles for the Advanced Markup assignment. */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* I'm modifying meyer's reset to suit my needs
+   for this project
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, footer, 
+header, hgroup, menu, nav, output, ruby, section, 
+summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+    font-family: 'Source Serif Pro', serif;
+    color: #222; 
+    font-size: 100%;
+	line-height: 1.50;
+    width: 80%;
+    margin: auto;
+    background-image: url("seamless_paper_texture.png");
+}
+
+h1, h2, h3, h4, h5, h6 {
+    /* fixes the 2px indent by the font */
+    position: relative;
+    right: 2px;
+    font-family: 'Quicksand', sans-serif;
+    
+}
+
+header {
+    text-align: center;
+    padding-top: 6em;
+    padding-bottom: 5em;
+}
+
+footer {
+    padding: 6em 0 0 0;
+    text-align: center;
+    font-size: 90%;
+}
+
+footer * {
+    display: inline;
+}
+
+small {
+    font-size: 90%;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0;
+    padding: 0 0 0.5em 0;
+}
+
+/* unvisited link */
+a:link {
+    color: #048593;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #048593;
+}
+
+/* mouse over link */
+a:hover {
+    color: #02bdce;
+    text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+    color: #02bdce;
+}
+
+#sidebar {
+    float: right;
+    width: 30%;
+    margin: 0 0 3em 3em;
+    padding: 2em;
+    background-color: #e8e8e8;
+    background-color: rgba(232,232,232,0.5);
+}
+
+#selected_works {
+    width: 100%;
+}
+
+#selected_works td, #selected_works th {
+    padding: 0.25em 3.5em 0.25em 0;
+    text-align: left;
+}
+
+#selected_works th {
+    font-weight: bold;
+    border-bottom: 1px solid #999;
+}
+
+#selected_works td {
+    border-bottom: 1px solid #b7b7b7;
+    border-bottom: 1px solid rgba(183,183,183,0.5);
+}
+
+/* giving some vertical space between the <p> tag in the content id */
+#content p, #content table {
+    margin: 1em 0;
+}
+
+.a-link--anchor {
+    /* Specified in % so that the sup/sup is the
+     right size relative to the surrounding text */
+    font-size: 75%;
+
+  /* Zero out the line-height so that it doesn't
+     interfere with the positioning that follows */
+    line-height: 0;
+
+  /* Where the magic happens: makes all browsers position
+     the sup/sup properly, relative to the surrounding text */
+    position: relative;
+
+  /* Note that if you're using Eric Meyer's reset.css, this
+     is already set and you can remove this rule */
+    vertical-align: baseline;
+    
+    /* Move the superscripted text up */
+    top: -0.5em;  
+}
+
+a.active {
+    text-decoration: underline;
+}
+
+.top-nav li, .bottom-nav li {
+    display: inline;
+    padding: 1em 1.5em;
+}
+
+.img--bio-photo {
+    width: 80%;
+    height: auto;
+}
+
+.p-disclaimer {
+    font-size: 90%;
+    font-style: italic;
+}
+
+.social-media-list li {
+    display: inline;
+    padding-right: 1em;
+    font-size: 120%;
+}
+
+.poe-img-caption-blk {
+    padding: 0 1em 0 0;
+    float: left;
+    font-weight: bold;
+    font-size: 85%;
+    width: 25%; 
+}
+/* helps setting the caption under the img */
+.poe-img-caption-blk:after {
+    content: '';
+    display:block;
+    clear:both;
+}
+
+.typl8-tera {
+  font-size: 117px;
+  font-size: 6.5rem; /* 117 / 18 = 6.5 */
+  margin-bottom: 4.56923px;
+  margin-bottom: 0.25385rem;
+}
+
+.typl8-giga {
+  font-size: 90px;
+  font-size: 5rem; /* 90 / 18 = 5 */
+  margin-bottom: 5.94px;
+  margin-bottom: 0.33rem;
+}
+
+.typl8-mega {
+  font-size: 72px;
+  font-size: 4rem; /* 72 / 18 = 4 */
+  margin-bottom: 7.425px;
+  margin-bottom: 0.4125rem;
+}
+
+h1,
+.typl8-alpha {
+  font-size: 60px;
+  font-size: 3.33333rem; /* 60 / 18 = 3.3333 */
+  margin-bottom: 8.91px;
+  margin-bottom: 0.495rem;
+}
+
+h2,
+.typl8-beta {
+  font-size: 48px;
+  font-size: 2.6667rem; /* 48 / 18 = 2.6667 */
+  margin-bottom: 11.1375px;
+  margin-bottom: 0.61875rem;
+}
+
+h3,
+.typl8-gamma {
+  font-size: 36px;
+  font-size: 2rem; /* 36 / 18 = 2 */
+  margin-bottom: 14.85px;
+  margin-bottom: 0.825rem;
+}
+
+h4,
+.typl8-delta {
+  font-size: 24px;
+  font-size: 1.3333333333333333rem; /* 24 / 18 = 1.3333 */
+  margin-bottom: 22.275px;
+  margin-bottom: 1.2375rem;
+}
+
+h5,
+.typl8-epsilon {
+  font-size: 21px;
+  font-size: 1.16667rem; /* 21 / 18 = 1.1667 */
+  margin-bottom: 25.45714px;
+  margin-bottom: 1.41429rem;
+}
+
+h6,
+.typl8-zeta {
+  font-size: 18px;
+  font-size: 1rem; /* 18 = 18 × 1 */
+  margin-bottom: 29.7px;
+  margin-bottom: 1.65rem;
+}
+
+ol, ul {
+	list-style: none;
+}
+    
+blockquote, q {
+	quotes: none;
+}
+    
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+    
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
